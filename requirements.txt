@@ -1,0 +1,4 @@
+#install with 'pip install -r requirements.txt'
+pygtail >= 0.6.1
+redis >= 2.10.5
+regex
