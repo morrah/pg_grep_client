@@ -2,7 +2,7 @@
 
 **[pg_grep_client](https://github.com/morrah/pg_grep_client)** parses postgres log files using regexp and pushes it's contents to redis channels, using ip as a channel name;
 
-**[pg_grep_server](https://github.com/morrah/pg_grep_client)** subscribes web-clients to channels.
+**[pg_grep_server](https://github.com/morrah/pg_grep_server)** subscribes web-clients to channels.
 
 
 # Installation
@@ -17,9 +17,10 @@ python client.py
 ```
 
 ```pg_log_dir``` in ```pg_log.conf``` should be set to your postgres log directory; 
+
 otherwise dummy log could be generated to ```./log``` for demo using ```python pg_log_generator.py```
 
-**!!!: set the same log format in postgres config and client.py**
+**set the same log format in postgres config and client.py**
 
 ```PG_PATTERN = PgPattern().from_log_format('%m %u@%d %h %c ')```
 
